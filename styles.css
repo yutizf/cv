@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#foto{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+}
+
+.cv{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 50% 50%;
+    margin: 2px;
+}
+
+.header{
+    margin-bottom: 10px;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+.foto{
+    grid-column: 1 / 2;
+    margin: 10px;
+    text-align: start;
+    z-index: 20;
+}
+.titulos{
+    grid-column: 2 / 3;
+    text-align: center;
+    background-color: #28756f;
+    color: #ffffff;
+    position: relative;
+    left: -200px;
+    z-index: 10;
+    height: 100%;
+    align-content: center;
+}
+
+.aside{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    margin-top: 20px;
+}
+.section{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    margin-top: 20px;
+}
+.titulos_nombre{
+    font-size: 40px;
+    padding: 20px;
+}
+.titulos_puesto{
+    font-size: 30px;
+    padding: 5px;
+}
+.titulos_experiencia{
+    font-size: 20px;
+    padding: 5px;
+}
