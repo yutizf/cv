@@ -4,62 +4,87 @@
 }
 
 #foto{
-    width: 170px;
-    height: 170px;
+    height: 8em;
+    width: 8em;
     border-radius: 50%;
 }
-
 .cv{
+    margin: 1em 3em;
     display: grid;
-    grid-template-columns: 25% 75%;
-    grid-template-rows: 50% 50%;
-    margin: 2px;
-}
-
-.header{
-    margin-bottom: 10px;
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-    display: grid;
-    grid-template-columns: 25% 75%;
-}
-.foto{
-    grid-column: 1 / 2;
-    margin: 10px;
-    text-align: start;
-    z-index: 20;
-}
-.titulos{
-    grid-column: 2 / 3;
-    text-align: center;
-    background-color: #28756f;
-    color: #ffffff;
-    position: relative;
-    left: -200px;
-    z-index: 10;
-    height: 100%;
-    align-content: center;
-}
-
-.aside{
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    margin-top: 20px;
-}
-.section{
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    margin-top: 20px;
-}
-.titulos_nombre{
-    font-size: 40px;
-    padding: 20px;
-}
-.titulos_puesto{
-    font-size: 30px;
-    padding: 5px;
-}
-.titulos_experiencia{
-    font-size: 20px;
-    padding: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: 1fr 1fr;
+    .header{
+        height: 10em;
+        width: 100%;
+        margin-bottom: 1em;
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        text-shadow: 3px 3px  #000000;
+        .foto{
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            text-align: start;
+            z-index: 10;
+            position: relative;
+            left: -2em;
+            align-content: center;
+            #foto:hover{
+                height: 10em;
+                width: 10em;
+            }
+        }
+        .titulos{
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+            text-align: center;
+            background-color: rgb(24, 86, 107);
+            z-index: 5;
+            height: 100%;
+            align-content: center;
+            color: white;
+            .titulos_nombre{
+                font-size: 3em;
+            }
+            .titulos_puesto{
+                font-size: 2em;
+            }
+            .titulos_experiencia{
+                font-size: 1em;
+            }
+        }
+    }
+    .aside{
+        border: 1px solid #000000;
+        padding: 1em;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        .aside_sobremi, .aside_estudios{
+            color: rgb(24, 86, 107);
+            font-weight: bold;
+        }
+        .aside_sobremi_detalle:hover, .aside_estudios_detalle:hover{
+            font-size: 1.05em;
+        }
+    }
+    .section{
+        border: 1px solid #000000;
+        padding: 1em;
+        grid-column: 2 / 4;
+        grid-row: 2 / 3;
+        .section_experiencia{
+            color: rgb(24, 86, 107);
+            font-weight: bold;
+        }
+        .section_experiencia_detalle p:first-child{
+            font-weight: bold;
+            color: rgb(24, 86, 107);
+        }
+        .section_experiencia_detalle:hover{
+            font-size: 1.05em;
+        }
+        
+    }
 }
